@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  position: relative;
+  font-family: "Stylish", sans-serif;
+}
+header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header a img {
+  height: 100%;
+  margin: 30px;
+}
+.img-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.img-container > img {
+  width: 20vw;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+.img-container > img:hover {
+  filter: grayscale(0);
+  animation: big 0.1s linear forwards;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 60vh;
+  background-color: rgb(255, 255, 255);
+  z-index: 999;
+  cursor: pointer;
+  border-radius: 1.5%;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background-color: #f1f2f6;
+}
+.name-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin-top: 0.5vh;
+  height: 5vh;
+
+  /* 테두리 선은 영역 표시 위해 그려논 것 다 완성 후 지울 것 */
+  /* border: 3px solid black; */
+}
+.modal-body {
+  display: flex;
+}
+
+.modal-body > div {
+  width: 50%;
+  /* 테두리 선은 영역 표시 위해 그려논 것 다 완성 후 지울 것 */
+  /* border: 3px solid black; */
+  height: 55vh;
+}
+.image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.person-image {
+  /* 수치는 조정할 것 */
+  width: 50%;
+}
+.explain-div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  margin-right: 5vw;
+}
+.explain-div > span {
+  display: block;
+  margin-bottom: 1em;
+  font-size: 18px;
+}
+
+@keyframes big {
+  from {
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
